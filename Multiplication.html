@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Multiplication Table</title>
+    <style>
+      .cell {
+        display: inline-block;
+        width 30px;
+        height: 30px;
+        text-align: right;
+      }
+
+      .header {
+        background: lightblue;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Multiplication Table</h1>
+    <table>
+      <script>
+        // output the header row
+        document.write('<span class="cell header">X</span>');
+        for (i = 1; i <= 10; i++) {
+          document.write('<span class="cell header">' + i + '</span>');
+        }
+        document.write('<br>');
+
+
+        var i, j, total; // global variables
+
+        for (i = 0; i <= 10; i++) {
+          for (j = 0; j <= 10; j++) {
+            total = i * j;
+            total = " " + total
+            ///add space before each number
+            // Add another space before single digits
+            if (total < 10) total = " " + total;
+            // Display result
+            document.write(total);
+          } // end inner j loop
+          document.write("<BR>"); // end of line break
+        } // end of i outer loop
+
+      </script>
+    </table>
+  </body>
+
+</html>
